@@ -45,12 +45,14 @@ RCT_EXPORT_METHOD(call:(NSString *)urlString userInfo:(NSDictionary *)userInfo)
             builder.room = urlString;
             builder.userInfo = _userInfo;
             [builder setFeatureFlag:@"add-people.enabled" withBoolean:NO];
-            [builder setFeatureFlag:@"chat.enabled" withBoolean:NO];
+            // [builder setFeatureFlag:@"chat.enabled" withBoolean:NO];
             [builder setFeatureFlag:@"ios.recording.enabled" withBoolean:NO];
             [builder setFeatureFlag:@"live-streaming.enabled" withBoolean:NO];
             [builder setFeatureFlag:@"meeting-name.enabled" withBoolean:NO];
             [builder setFeatureFlag:@"meeting-password.enabled" withBoolean:NO];
             [builder setFeatureFlag:@"invite.enabled" withBoolean:NO];
+            [builder setFeatureFlag:@"raise-hand.enabled" withBoolean:NO];
+            [builder setFeatureFlag:@"calendar.enabled" withBoolean:NO];
         }];
         [jitsiMeetView join:options];
     });
